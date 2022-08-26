@@ -38,12 +38,14 @@
 *Page6
 
 [bg  time="1000"  method="crossfade"  storage="Slide6.jpg"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="6.ogg"  ]
 [glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page5"  ]
 [glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page7"  ]
 [s  ]
 *Page7
 
 [bg  time="1000"  method="crossfade"  storage="Slide7.jpg"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="7.ogg"  ]
 [glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page6"  ]
 [glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page8"  ]
 [s  ]
