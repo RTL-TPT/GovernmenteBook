@@ -1,113 +1,114 @@
 [_tb_system_call storage=system/_scene1.ks]
 
 [cm  ]
-*Page1
+*1
 
 [bg  storage="Slide1.jpg"  time="1000"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="1.ogg"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page2"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*2"  ]
 [s  ]
-*Page2
+*2
 
 [bg  time="1000"  method="crossfade"  storage="Slide2.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="2.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page1"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page3"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*1"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*3"  ]
 [s  ]
-*Page3
+*3
 
 [bg  time="1000"  method="crossfade"  storage="Slide3.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="3.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page2"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page4"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*2"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*4"  ]
 [s  ]
-*Page4
+*4
 
 [bg  time="1000"  method="crossfade"  storage="Slide4.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="4.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page3"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page5"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*3"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*5"  ]
 [s  ]
-*Page5
+*5
 
 [bg  time="1000"  method="crossfade"  storage="Slide5.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="5.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page4"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page6"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*4"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*6"  ]
 [s  ]
-*Page6
+*6
 
 [bg  time="1000"  method="crossfade"  storage="Slide6.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="6.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page5"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page7"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*5"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*7"  ]
 [s  ]
-*Page7
+*7
 
 [bg  time="1000"  method="crossfade"  storage="Slide7.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="7.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page6"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page8"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*6"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*8"  ]
 [s  ]
-*Page8
+*8
 
 [bg  time="1000"  method="crossfade"  storage="Slide8.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="8.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page7"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page9"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*7"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*9"  ]
 [s  ]
-*Page9
+*9
 
 [bg  time="1000"  method="crossfade"  storage="Slide9.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="9.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page8"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page10"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*8"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*10"  ]
 [s  ]
-*Page10
+*10
 
 [bg  time="1000"  method="crossfade"  storage="Slide10.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="10.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page9"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page11"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*9"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*11"  ]
 [s  ]
-*Page11
+*11
 
 [bg  time="1000"  method="crossfade"  storage="Slide11.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="11.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page10"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page12"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*10"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*12"  ]
 [s  ]
-*Page12
+*12
 
 [bg  time="1000"  method="crossfade"  storage="Slide12.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="12.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page11"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page13"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*11"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*13"  ]
 [s  ]
-*Page13
+*13
 
 [bg  time="1000"  method="crossfade"  storage="Slide13.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="13.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page12"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page14"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*12"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*14"  ]
 [s  ]
-*Page14
+*14
 
 [bg  time="1000"  method="crossfade"  storage="Slide14.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="14.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page13"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page15"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*13"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*15"  ]
 [s  ]
-*Page15
+*15
 
 [bg  time="1000"  method="crossfade"  storage="Slide15.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="15.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page14"  ]
-[glink  color="green"  storage="scene1.ks"  size="40"  text="Next"  x="650"  y="665"  width="83"  height="39"  target="*Page16"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*14"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*16"  ]
 [s  ]
-*Page16
+*16
 
 [bg  time="1000"  method="crossfade"  storage="Slide16.jpg"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="16.ogg"  ]
-[glink  color="orange"  storage="scene1.ks"  size="40"  text="Back"  x="400"  y="665"  width="83"  height="39"  target="*Page15"  ]
+[clickable  storage="scene1.ks"  x="229"  y="846"  width="250"  height="200"  target="*15"  ]
+[clickable  storage="scene1.ks"  x="1430"  y="846"  width="250"  height="200"  target="*1"  ]
 [s  ]
