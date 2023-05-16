@@ -10,7 +10,7 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Goverment eBook'
+        description: 'Governmente eBook'
         # Input has to be provided for the workflow to run
         required: false
 
