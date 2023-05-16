@@ -1,0 +1,60 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Goverment eBook'
+        # Input has to be provided for the workflow to run
+        required: false
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GAME_SLUG: 'govermentebook'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+            lfs: true
+      - name: Configure Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID_PROD }}:role/springroll-ci
+          role-session-name: SpringRollCI
+      - name: Set AWS concurrency
+        run: aws configure set default.s3.max_concurrent_requests 20
+      - name: Upload release artifacts
+        run: |
+          aws s3 cp --only-show-errors --acl public-read --recursive ./ s3://springrolljenkins/games/$GAME_SLUG/$GITHUB_SHA/release/
+      - name: Deploy version
+        run: |
+          versionNum=1.2.0
+          GIT_MSG=$(git log --format=%B -n 1)
+          rm -f msg_dirty msg_cleaner msg_clean
+          echo $GIT_MSG >> msg_dirty
+          tr '\n' ' ' < msg_dirty > msg_cleaner
+          tr '\"' '%' < msg_cleaner > msg_clean
+          GIT_MSG=`cat msg_clean`
+          URL="https://springroll.tpt.cloud/api/release/$GAME_SLUG"
+          HEADERS="Content-Type: application/json"
+          PAYLOAD='{"token": "${{ secrets.TOKEN }}", "status": "dev","version": "'$versionNum'", "commitId": "'$GITHUB_SHA'", "notes": "'$GIT_MSG' Direct link: https://springrolljenkins.s3.amazonaws.com/games/'$GAME_SLUG'/'$GITHUB_SHA'/release/index.html"}'
+          curl "$URL"
+          echo "$PAYLOAD"
+          curl -k -H "$HEADERS" -X POST --data "$PAYLOAD" "$URL"
+
