@@ -41,7 +41,7 @@ jobs:
         run: aws configure set default.s3.max_concurrent_requests 20
       - name: Upload release artifacts
         run: |
-          aws s3 cp --only-show-errors --acl public-read --recursive ./deploy s3://springrolljenkins/games/$GAME_SLUG/$GITHUB_SHA/release/
+          aws s3 cp --only-show-errors --acl public-read --recursive ./docs s3://springrolljenkins/games/$GAME_SLUG/$GITHUB_SHA/release/
           aws s3 cp --acl public-read ./bin/release.zip s3://springrolljenkins/games/$GAME_SLUG/$GITHUB_SHA/
           aws s3 cp --acl public-read ./bin/debug.zip s3://springrolljenkins/games/$GAME_SLUG/$GITHUB_SHA/
       - name: Deploy version
